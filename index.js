@@ -36,7 +36,7 @@ const run = async () => {
         return res.send({ status: true, data: result });
       }
       res.send({ status: false });
-      
+
     });
 
     app.patch("/apply", async (req, res) => {
@@ -143,6 +143,28 @@ const run = async () => {
 
       res.send({ status: true, data: result });
     });
+
+    // searching job route create
+    // app.get("/searchJobs/:srcData", async (req, res) => {
+    //   const id = req.params.srcData;
+    //   const query = {}
+    // })
+
+    // app.get('/searchJobs/search', async (req, res) => {
+    //   const searchTerm = req.query.term;
+    //   const regex = new RegExp(searchTerm, 'i');
+    //   const searchData = await jobCollection.find({
+    //     $or: [
+    //       { orderid: regex },
+    //       { from: regex },
+    //       { to: regex },
+    //     ]
+    //   })
+    //     .toArray();
+    //   console.log(searchData);
+    //   res.json(searchData);
+    // });
+
   } finally {
   }
 };
